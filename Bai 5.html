@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+    <head> 
+        <title> Lập danh sách sinh viên</title>
+    </head>
+    <body>
+        <script language="javascript">
+
+        var Student = {
+            data : [],
+        
+         addStudent : function(name, age, group, score){
+            var item = {
+                name : name,
+                age : age,
+                group : group,
+                score : score,
+            };
+
+            this.data.push(item);
+        },
+        
+        viewStudent : function(){
+            var listStudent = this.data;
+
+            for(var i = 0; i < listStudent.length; i++){
+                document.write("<div>" + listStudent[i].name + " | " + listStudent[i].age + " | " + listStudent[i].group + " | " + listStudent[i].score + "</div>");
+            }
+        },
+       
+       
+    };
+            Student.addStudent("Nguyễn A" , "19" , "K62" , "80" );
+            Student.addStudent(" Phạm B" , "20" , "K61" , "85" );
+            Student.viewStudent();
+
+        </script>
+    </body>
+</html>
