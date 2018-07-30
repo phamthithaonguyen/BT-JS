@@ -1,77 +1,76 @@
 <!DOCTYPE HTML>
 <html>
-    <head> 
-        <title> Lập danh sách sinh viên</title>
+  <head>
+    <title> Bài 5: Lập danh sách quản lí sinh viên</title>
     </head>
     <body>
-        <script language="javascript">
-    var Student = {
-            data : [],
-        // a. Cho phép nhập danh sách học sinh
-        addStudent : function(name, age, group, score){
-            var item = {
-                name : name,
-                age : age,
-                group : group,
-                score : score,
-            };
+      <script language="javascript">
+      var Student = {
+        data : [],
+  // a. Cho phép nhập danh sách học sinh
+      addStudent : function(name, age, group, score){
+        var item = {
+          name : name,
+          age : age,
+          group : group,
+          score : score,
+        };
 
-            this.data.push(item);
-        },      
-        // b. In ra danh sách học sinh
-        viewStudent : function(){
-            var listStudent = this.data;
-              for(var i = 0; i < listStudent.length; i++){
-                document.write("<div>" + listStudent[i].name + " | " + listStudent[i].age + " | " + listStudent[i].group + " | " + listStudent[i].score + "</div>");
-            }
-            document.write("<p></p>");
-        },
-        // c. In ra danh sách học sinh đã sắp xếp theo điểm trung bình
-        sortStudent : function(){
-         var list = this.data;        
+        this.data.push(item);
+      },
+  // b. In ra danh sách học sinh
+      viewStudent : function(){
+        var listStudent = this.data;
+          for(var i = 0; i < listStudent.length; i++){
+            document.write("<div>" + listStudent[i].name + " | " + listStudent[i].age + " | " + listStudent[i].group + " | " + listStudent[i].score + "</div>");
+          }
+          document.write("<p></p>");
+      },
+  // c. In ra danh sách học sinh đã sắp xếp theo điểm trung bình
+      sortStudent : function(){
+        var list = this.data;
           for(var i = 0; i < list.length - 1; i++){
-           for(var j = i + 1; j < list.length; j++){
-             if(list[j].score < list[i].score){
-               var t = list[i];
-               list[i] = list[j];
-               list[j] = t;
-             }
-           }
-         }
-        },
-        //d. Xóa một học sinh khỏi danh sách
-        removeStudent : function (name){
-     	  var list = this.data;
-           for (var i = 0; i < list.length; i++){
-               if (list[i].name === name){
-                   list.splice(i,1);
-                }
-           }
-        },
-        //e. Chỉnh sửa thông tin của một học sinh
-        editStudent : function(name, age, group, score){
-        	var list = this.data;
-            for(var i = 0; i < list.length; i++){
-              if (list[i].name === name) { 
-                    list[i].age = age;
-                    list[i].group = group;
-                    list[i].score = score;
-              }
+          for(var j = i + 1; j < list.length; j++){
+            if(list[j].score < list[i].score){
+              var t = list[i];
+              list[i] = list[j];
+              list[j] = t;
             }
+          }
         }
+      },
+  //d. Xóa một học sinh khỏi danh sách
+      removeStudent : function (name){
+     	  var list = this.data;
+        for (var i = 0; i < list.length; i++){
+          if (list[i].name === name){
+            list.splice(i,1);
+          }
+          }
+        },
+  //e. Chỉnh sửa thông tin của một học sinh
+      editStudent : function(name, age, group, score){
+        var list = this.data;
+        for(var i = 0; i < list.length; i++){
+          if (list[i].name === name) {
+            list[i].age = age;
+            list[i].group = group;
+            list[i].score = score;
+          }
+        }
+      }
     };
 
-            Student.addStudent("A" , "19" , "K62" , "80" );
-            Student.addStudent("B" , "21" , "K60" , "85" );
-            Student.addStudent("C" , "20" , "K61" , "75" );
-            Student.viewStudent();
-            Student.sortStudent();
-            Student.viewStudent();
-            Student.removeStudent("A");
-            Student.viewStudent();
-            Student.editStudent("B", "22", "K59", "85");
-            Student.viewStudent();
-
+  Student.addStudent("A" , "19" , "K62" , "80" );
+  Student.addStudent("B" , "21" , "K60" , "85" );
+  Student.addStudent("C" , "20" , "K61" , "75" );
+  Student.viewStudent();
+  Student.sortStudent();
+  Student.viewStudent();
+  Student.removeStudent("A");
+  Student.viewStudent();
+  Student.editStudent("B", "22", "K59", "85");
+  Student.viewStudent();
         </script>
     </body>
 </html>

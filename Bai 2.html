@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+    <p>
+      Viết phương trình bậc 2, với các số a, b, c được nhập vào từ bàn phím.
+    </p>
+    </head>
+    <body>
+        Số a: <input id="numb">
+        Số b: <input id="numb2">
+        Số c: <input id="numb3">
+        <button type="button" onclick="vietpt()">Submit</button>
+        <p id="ketqua"></p>
+    </body>
+    <script>
+      function vietpt(){
+      var a,b,c
+    a = parseInt(document.getElementById("numb").value);
+    b = parseInt(document.getElementById("numb2").value);
+    c = parseInt(document.getElementById("numb3").value);
+
+    document.getElementById("ketqua").innerHTML ="Phương trình bậc hai là:  " + a+"*x^2 + "+b+"*x + "+c ;
+}
+       </script>
+</html>
