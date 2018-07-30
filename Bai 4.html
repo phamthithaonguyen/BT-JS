@@ -12,17 +12,14 @@
   </body>
   <script>
     function tinhtong(){
-      var x,y;
       x = parseInt(document.getElementById("numb").value);
       y = parseInt(document.getElementById("numb2").value);
-      function UCLN(x,y){
-        while(x!=y)   {
-          if(x>y) { x=x-y }
-          else y=y-x;
-        }
+      while(x!=y) {
+        if(x>y) { x=x-y }
+        else y=y-x;
+      }
       return x;
     }
-    document.getElementById("demo").innerHTML = "Ước chung lớn nhất là: " + UCLN(x,y);
-    }
+    document.getElementById("demo").innerHTML = "Ước chung lớn nhất là: " + tinhtong();
   </script>
 </html>
