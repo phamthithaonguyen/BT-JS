@@ -2,12 +2,13 @@
 <html>
   <head>
     <title> Bài 5: Lập danh sách quản lí sinh viên</title>
-    </head>
-    <body>
-      <script language="javascript">
-      var Student = {
-        data : [],
-  // a. Cho phép nhập danh sách học sinh
+  </head>
+  <body>
+  </body>
+  <script language="javascript">
+    var Student = {
+      data : [],
+      // a. Cho phép nhập danh sách học sinh
       addStudent : function(name, age, group, score){
         var item = {
           name : name,
@@ -15,10 +16,9 @@
           group : group,
           score : score,
         };
-
         this.data.push(item);
       },
-  // b. In ra danh sách học sinh
+      // b. In ra danh sách học sinh
       viewStudent : function(){
         var listStudent = this.data;
           for(var i = 0; i < listStudent.length; i++){
@@ -26,7 +26,7 @@
           }
           document.write("<p></p>");
       },
-  // c. In ra danh sách học sinh đã sắp xếp theo điểm trung bình
+      // c. Sắp xếp theo điểm trung bình
       sortStudent : function(){
         var list = this.data;
           for(var i = 0; i < list.length - 1; i++){
@@ -37,18 +37,18 @@
               list[j] = t;
             }
           }
-        }
+          }
       },
-  //d. Xóa một học sinh khỏi danh sách
+      //d. Xóa một học sinh khỏi danh sách
       removeStudent : function (name){
      	  var list = this.data;
         for (var i = 0; i < list.length; i++){
           if (list[i].name === name){
             list.splice(i,1);
           }
-          }
-        },
-  //e. Chỉnh sửa thông tin của một học sinh
+        }
+      },
+      //e. Chỉnh sửa thông tin của một học sinh
       editStudent : function(name, age, group, score){
         var list = this.data;
         for(var i = 0; i < list.length; i++){
@@ -71,6 +71,5 @@
   Student.viewStudent();
   Student.editStudent("B", "22", "K59", "85");
   Student.viewStudent();
-        </script>
-    </body>
+  </script>
 </html>

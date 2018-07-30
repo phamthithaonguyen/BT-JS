@@ -1,7 +1,7 @@
 <html>
   <head>
     <p>
-        Bài 4: Viết chương trình tính ước chung lớn nhất của 2 số
+      Bài 4: Viết chương trình tính ước chung lớn nhất của 2 số
     </p>
   </head>
   <body>
@@ -11,18 +11,18 @@
     <p id="demo"></p>
   </body>
   <script>
-      function tinhtong(){
+    function tinhtong(){
       var x,y;
-    x = parseInt(document.getElementById("numb").value);
-    y = parseInt(document.getElementById("numb2").value);
+      x = parseInt(document.getElementById("numb").value);
+      y = parseInt(document.getElementById("numb2").value);
       function UCLN(x,y){
-          while(x!=y)   {
-              if(x>y) { x=x-y }
-              else y=y-x;
-          }
-              return x;
-      }
-      document.getElementById("demo").innerHTML = "Ước chung lớn nhất là: " + UCLN(x,y);
-      }
+        while(x!=y)   {
+          if(x>y) { x=x-y }
+          else y=y-x;
+        }
+      return x;
+    }
+    document.getElementById("demo").innerHTML = "Ước chung lớn nhất là: " + UCLN(x,y);
+    }
   </script>
 </html>
