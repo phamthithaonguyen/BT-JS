@@ -15,7 +15,7 @@
       x = parseInt(document.getElementById("numb").value);
       y = parseInt(document.getElementById("numb2").value);
       while (x != y) {
-        if (x > y) {x = x - y} ;
+        if (x > y) x = x - y ;
         else y = y - x;
       }
       document.getElementById("ket_qua").innerHTML = "Ước chung lớn nhất là: " + x;
