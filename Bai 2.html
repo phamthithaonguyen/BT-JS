@@ -6,16 +6,15 @@
     </p>
   </head>
   <body>
-    Số a: <input id="numb">
-    Số b: <input id="numb2">
-    Số c: <input id="numb3">
+    Số a: <input id="numb1">;
+    Số b: <input id="numb2">;
+    Số c: <input id="numb3">;
     <button type="button" onclick="vietpt()">Submit</button>
     <p id="ketqua"></p>
   </body>
   <script>
     function vietpt(){
-      var a,b,c
-      a = parseInt(document.getElementById("numb").value);
+      var a = parseInt(document.getElementById("numb1").value);
       b = parseInt(document.getElementById("numb2").value);
       c = parseInt(document.getElementById("numb3").value);
       document.getElementById("ketqua").innerHTML ="Phương trình bậc hai là:  " + a+"*x^2 + "+b+"*x + "+c ;

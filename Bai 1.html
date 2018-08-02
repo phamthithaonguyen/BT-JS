@@ -7,16 +7,16 @@
   </head>
   <body>
     Điền số có 2 chữ số <input id="numb">
-    <button type="button" onclick="myFunction()">Submit</button>
-    <p id="demo"></p>
+    <button type="button" onclick="tinhtong()">Submit</button>
+    <p id="ketqua"></p>
   </body>
   <script>
-    function myFunction(){
+    function tinhtong(){
       var a = parseInt(document.getElementById("numb").value);
-      var b = a%10;
+      b = a%10;
       c = (a-b)/10;
       d = b+c;
-      document.getElementById("demo").innerHTML = "Kết quả: " + d;
+      document.getElementById("ketqua").innerHTML = "Kết quả: " + d;
     }
   </script>
 </html>

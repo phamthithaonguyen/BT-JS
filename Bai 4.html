@@ -7,19 +7,22 @@
   <body>
     So thu nhat: <input id="numb">
     So thu hai: <input id="numb2">
-    <button type="button" onclick="tinhtong()">Submit</button>
-    <p id="demo"></p>
+    <button type="button" onclick="tinh()">Submit</button>
+    <p id="ketqua"></p>
   </body>
   <script>
-    function tinhtong(){
-      x = parseInt(document.getElementById("numb").value);
-      y = parseInt(document.getElementById("numb2").value);
-      while(x!=y) {
-        if(x>y) { x=x-y }
-        else y=y-x;
-      }
-      return x;
+    function tinh(){
+    var x,y;
+  x = parseInt(document.getElementById("numb").value);
+  y = parseInt(document.getElementById("numb2").value);
+    function UCLN(x,y){
+        while(x!=y)   {
+            if(x>y) { x=x-y }
+            else y=y-x;
+        }
+            return x;
     }
-    document.getElementById("demo").innerHTML = "Ước chung lớn nhất là: " + tinhtong();
-  </script>
+    document.getElementById("ketqua").innerHTML = "Ước chung lớn nhất là: " + UCLN(x,y);
+    }
+</script>
 </html>

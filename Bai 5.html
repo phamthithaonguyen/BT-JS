@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
   <head>
-    <title> Bài 5: Lập danh sách quản lí sinh viên</title>
+    <title>Bài 5: Lập danh sách quản lí sinh viên</title>
   </head>
   <body>
   </body>
@@ -19,17 +19,17 @@
         this.data.push(item);
       },
       // b. In ra danh sách học sinh
-      viewStudent : function(){
-        var listStudent = this.data;
-          for(var i = 0; i < listStudent.length; i++){
-            document.write("<div>" + listStudent[i].name + " | " + listStudent[i].age + " | " + listStudent[i].group + " | " + listStudent[i].score + "</div>");
+      showStudent : function(){
+        var list = this.data;
+        for(var i = 0; i < list.length; i++){
+          document.write("<div>" + list[i].name + " | " + list[i].age + " | " + list[i].group + " | " + list[i].score + "</div>");
           }
-          document.write("<p></p>");
+        document.write("</br>");
       },
       // c. Sắp xếp theo điểm trung bình
       sortStudent : function(){
         var list = this.data;
-          for(var i = 0; i < list.length - 1; i++){
+        for(var i = 0; i < list.length - 1; i++){
           for(var j = i + 1; j < list.length; j++){
             if(list[j].score < list[i].score){
               var t = list[i];
@@ -37,7 +37,7 @@
               list[j] = t;
             }
           }
-          }
+        }
       },
       //d. Xóa một học sinh khỏi danh sách
       removeStudent : function (name){
@@ -60,16 +60,15 @@
         }
       }
     };
-
     Student.addStudent("A" , "19" , "K62" , "80" );
     Student.addStudent("B" , "21" , "K60" , "85" );
     Student.addStudent("C" , "20" , "K61" , "75" );
-    Student.viewStudent();
+    Student.showStudent();
     Student.sortStudent();
-    Student.viewStudent();
+    Student.showStudent();
     Student.removeStudent("A");
-    Student.viewStudent();
+    Student.showStudent();
     Student.editStudent("B", "22", "K59", "85");
-    Student.viewStudent();
+    Student.showStudent();
   </script>
 </html>
