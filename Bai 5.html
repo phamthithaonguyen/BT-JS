@@ -9,7 +9,7 @@
     var Student = {
       data : [],
       // a. Cho phép nhập danh sách học sinh
-      addStudent : function(name, age, group, score) {
+      addStudent : function (name, age, group, score) {
         var item = {
           name : name,
           age : age,
@@ -19,19 +19,19 @@
         this.data.push(item);
       },
       // b. In ra danh sách học sinh
-      showList : function() {
+      showList : function () {
         var list = this.data;
-        for(var i = 0; i < list.length; i++) {
-          document.write("<div>" + list[i].name + " | " + list[i].age + " | " + list[i].group + " | " + list[i].score + "</div>");
+        for (var i = 0; i < list.length; i++) {
+          document.write ("<div>" + list[i].name + " | " + list[i].age + " | " + list[i].group + " | " + list[i].score + "</div>");
         }
-        document.write("</br>");
+        document.write ("</br>");
       },
       // c. Sắp xếp theo điểm trung bình
-      sortStudent : function() {
+      sortStudent : function () {
         var list = this.data;
-        for(var i = 0; i < list.length - 1; i++) {
-          for(var j = i + 1; j < list.length; j++) {
-            if(list[j].score < list[i].score) {
+        for (var i = 0; i < list.length - 1; i++) {
+          for (var j = i + 1; j < list.length; j++) {
+            if (list[j].score < list[i].score) {
               var t = list[i];
               list[i] = list[j];
               list[j] = t;
@@ -49,9 +49,9 @@
         }
       },
       //e. Chỉnh sửa thông tin của một học sinh
-      editStudent : function(name, age, group, score) {
+      editStudent : function (name, age, group, score) {
         var list = this.data;
-        for(var i = 0; i < list.length; i++) {
+        for (var i = 0; i < list.length; i++) {
           if (list[i].name === name) {
             list[i].age = age;
             list[i].group = group;
@@ -60,15 +60,15 @@
         }
       }
     };
-    Student.addStudent("A", "19", "K62", "80");
-    Student.addStudent("B", "21", "K60", "85");
-    Student.addStudent("C", "20", "K61", "75");
-    Student.showList();
-    Student.sortStudent();
-    Student.showList();
-    Student.removeStudent("A");
-    Student.showList();
-    Student.editStudent("B", "22", "K59", "85");
-    Student.showList();
+    Student.addStudent ("A", "19", "K62", "80");
+    Student.addStudent ("B", "21", "K60", "85");
+    Student.addStudent ("C", "20", "K61", "75");
+    Student.showList ();
+    Student.sortStudent ();
+    Student.showList ();
+    Student.removeStudent ("A");
+    Student.showList ();
+    Student.editStudent ("B", "22", "K59", "85");
+    Student.showList ();
   </script>
 </html>
