@@ -19,11 +19,11 @@
         this.data.push(item);
       },
       // b. In ra danh sách học sinh
-      showStudent : function(){
+      showList : function(){
         var list = this.data;
         for(var i = 0; i < list.length; i++){
           document.write("<div>" + list[i].name + " | " + list[i].age + " | " + list[i].group + " | " + list[i].score + "</div>");
-          }
+        }
         document.write("</br>");
       },
       // c. Sắp xếp theo điểm trung bình
@@ -63,12 +63,12 @@
     Student.addStudent("A" , "19" , "K62" , "80" );
     Student.addStudent("B" , "21" , "K60" , "85" );
     Student.addStudent("C" , "20" , "K61" , "75" );
-    Student.showStudent();
+    Student.showList();
     Student.sortStudent();
-    Student.showStudent();
+    Student.showList();
     Student.removeStudent("A");
-    Student.showStudent();
+    Student.showList();
     Student.editStudent("B", "22", "K59", "85");
-    Student.showStudent();
+    Student.showList();
   </script>
 </html>
