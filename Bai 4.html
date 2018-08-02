@@ -5,20 +5,20 @@
     </p>
   </head>
   <body>
-    So thu nhat: <input id="numb">
-    So thu hai: <input id="numb2">
-    <button type="button" onclick="UCLN()">Submit</button>
-    <p id="ketqua"></p>
+    Số thứ nhất: <input id="numb">
+    Số thứ hai: <input id="numb2">
+    <button type="button" onclick="UCLN()">Nhập</button>
+    <p id="ket_qua"></p>
   </body>
   <script>
-    function UCLN(){
+    function UCLN() {
       x = parseInt(document.getElementById("numb").value);
       y = parseInt(document.getElementById("numb2").value);
       while(x!=y){
-        if(x>y) { x=x-y }
+        if(x>y) x=x-y;
         else y=y-x;
       }
-      document.getElementById("ketqua").innerHTML = "Ước chung lớn nhất là: " + x;
+      document.getElementById("ket_qua").innerHTML = "Ước chung lớn nhất là: " + x;
     }
 </script>
 </html>
