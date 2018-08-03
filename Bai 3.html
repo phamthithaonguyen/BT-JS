@@ -6,18 +6,31 @@
     </p>
   </head>
   <body>
+    Nhập từng số vào dãy số: <input id="numb">
+    <button type="button" onclick="Add ()">Nhập</button>
+    </br>
+    <button type="button" onclick="Sort ()">Sắp xếp</button>
+    <p id="Day_so"></p>
+    <p id="Ket_qua"></p>
   </body>
   <script>
-    var n = [1, 5, 7, 2, 3] ;
-    for (var i = 0; i < n.length - 1; i++) {
-      for (var j = i + 1; j < n.length; j++) {
-        if (n[j] < n[i]) {
-          var t = n[i];
-          n[i] = n[j];
-          n[j] = t;
+    var n = [];
+    function Add () {
+      a = parseInt(document.getElementById("numb").value);
+      n.push(a);
+      document.getElementById("Day_so").innerHTML = "Dãy số được nhập vào: " + n;
+    }
+    function Sort () {
+      for (var i = 0; i < n.length - 1; i++) {
+        for (var j = i + 1; j < n.length; j++) {
+          if (n[j] < n[i]) {
+            var t = n[i];
+            n[i] = n[j];
+            n[j] = t;
+          }
         }
       }
+      document.getElementById("Ket_qua").innerHTML = "Dãy số được sắp xếp: " + n;
     }
-    document.write (n);
   </script>
 </html>
