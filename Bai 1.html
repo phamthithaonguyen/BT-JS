@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <p>
+      Nhập vào một số nguyên gồm 2 chữ số, tính tổng 2 chữ số đó
+    </p>
+  </head>
+  <body>
+    Điền số có 2 chữ số <input id="numb">
+    <button type="button" onclick="tinh_tong ()">Nhập</button>
+    <p id="ket_qua"></p>
+  </body>
+  <script>
+    function tinh_tong () {
+      a = parseInt(document.getElementById("numb").value);
+      b = a %10;
+      c = (a - b) /10;
+      d = b + c;
+      document.getElementById("ket_qua").innerHTML = "Kết quả: " + d;
+    }
+  </script>
+</html>
